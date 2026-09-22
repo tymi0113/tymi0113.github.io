@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩晓平官方网站，关注能源战略、国际关系与气候变化议题。提供深度评论、专家观点及学术研究资料。">
+    <meta name="keywords" content="韩晓平, 能源战略, 国际关系, 气候变化, 专家观点">
+    <title>韩晓平-能源战略与国际关系专家深度解读</title>
+    <style>
+        :root {
+            --primary-color: #1a3c6e;
+            --secondary-color: #c9a227;
+            --text-dark: #2c3e50;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+            font-weight: 400;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .cta-btn:hover {
+            background-color: #143a6b;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2c5282 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tag {
+            background-color: rgba(255,255,255,0.15);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 4rem 0;
+            background-color: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Research Focus */
+        .focus-section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .focus-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .focus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .focus-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .focus-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .focus-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Latest Articles */
+        .articles-section {
+            padding: 4rem 0;
+            background-color: var(--white);
+        }
+
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .article-item {
+            display: flex;
+            gap: 2rem;
+            padding: 1.5rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+        }
+
+        .article-item:hover {
+            border-color: var(--primary-color);
+        }
+
+        .article-date {
+            flex-shrink: 0;
+            text-align: center;
+            min-width: 80px;
+        }
+
+        .date-day {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .date-month {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+        }
+
+        .article-content {
+            flex: 1;
+        }
+
+        .article-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-content h3 a:hover {
+            color: var(--primary-color);
+        }
+
+        .article-excerpt {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        /* Contact */
+        .contact-section {
+            padding: 4rem 0;
+            background-color: var(--bg-light);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .info-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item strong {
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #143a6b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #888;
+            padding: 3rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+            
+            nav ul {
+                margin: 1rem 0;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .about-grid, .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .article-item {
+                flex-direction: column;
+            }
+            
+            .article-date {
+                text-align: left;
+                display: flex;
+                align-items: baseline;
+                gap: 5px;
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                韩晓平<span>.观点</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="active">关于我</a></li>
+                    <li><a href="#focus">研究领域</a></li>
+                    <li><a href="#articles">深度评论</a></li>
+                    <li><a href="#contact">联系合作</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">预约咨询</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>韩晓平</h1>
+                <div class="hero-tags">
+                    <span class="tag">能源战略专家</span>
+                    <span class="tag">国际关系学者</span>
+                    <span class="tag">气候变化观察者</span>
+                </div>
+                <p>致力于推动能源转型与可持续发展，提供基于事实的深度分析与建设性意见。关注全球地缘政治下的能源安全与未来能源格局。</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <img src="https://picsum.photos/seed/hanxp/600/800.jpg" alt="韩晓平专家肖像" class="about-img">
+                    <div class="about-content">
+                        <h2>关注能源与未来的观察者</h2>
+                        <p>韩晓平，资深能源战略与国际关系专家，长期关注全球能源格局演变、气候变化政策以及地缘政治对能源安全的影响。拥有丰富的行业分析经验，致力于为政策制定者和企业提供客观、专业的决策参考。</p>
+                        <p>在过去的数十年中，他深入参与多个国际能源项目，对全球能源供应链的稳定性、新能源技术的发展路径以及国际能源博弈有着独到的见解。</p>
+                        
+                        <div class="stats">
+                            <div class="stat-item">
+                                <h3>20+</h3>
+                                <p>年行业经验</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>500+</h3>
+                                <p>深度报告</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>100+</h3>
+                                <p>国际会议演讲</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Focus -->
+        <section id="focus" class="focus-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心研究领域</h2>
+                    <p>深入剖析全球能源格局与地缘政治动态</p>
+                </div>
+                <div class="focus-grid">
+                    <article class="focus-card">
+                        <div class="focus-icon">🌍</div>
+                        <h3>国际地缘政治与能源</h3>
+                        <p>分析中东局势、俄乌冲突对全球油气供应链的冲击，以及能源制裁与反制裁的博弈逻辑。</p>
+                    </article>
+                    <article class="focus-card">
+                        <div class="focus-icon">⚡</div>
+                        <h3>能源转型与新能源</h3>
+                        <p>探讨风能、光伏、氢能等可再生能源的发展现状与挑战，以及电力系统的灵活性改造。</p>
+                    </article>
+                    <article class="focus-card">
+                        <div class="focus-icon">🌡️</div>
+                        <h3>气候变化与碳中和</h3>
+                        <p>解读“双碳”目标下的产业机遇与风险，分析碳交易市场机制及绿色金融的发展方向。</p>
+                    </article>
+                    <article class="focus-card">
+                        <div class="focus-icon">🛡️</div>
+                        <h3>能源安全与战略储备</h3>
+                        <p>研究国家能源安全战略布局，探讨电力应急保障机制与关键基础设施的防护策略。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <div class="container">
+                <p class="quote-text">“能源不仅是经济发展的动力，更是国家安全的核心。在动荡的国际局势下，构建多元化、清洁化的能源体系迫在眉睫。”</p>
+                <p class="quote-author">—— 韩晓平</p>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section id="articles" class="articles-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>最新深度评论</h2>
+                    <p>追踪热点事件，解析背后的能源逻辑</p>
+                </div>
+                <div class="article-list">
+                    <article class="article-item">
+                        <div class="article-date">
+                            <span class="date-day">15</span>
+                            <span class="date-month">10月</span>
+                        </div>
+                        <div class="article-content">
+                            <h3><a href="#">全球能源危机下的供应链重构与韧性建设</a></h3>
+                            <p class="article-excerpt">面对地缘政治冲突带来的供应中断风险，各国正在加速调整能源结构。本文深入分析了如何通过技术创新与政策协同，构建更具韧性的全球能源供应链体系。</p>
+                            <div class="article-meta">能源战略 · 阅读 2,341</div>
+                        </div>
+                    </article>
+
+                    <article class="article-item">
+                        <div class="article-date">
+                            <span class="date-day">08</span>
+                            <span class="date-month">10月</span>
+                        </div>
+                        <div class="article-content">
+                            <h3><a href="#">欧洲能源转型阵痛：从依赖俄罗斯到寻找替代方案</a></h3>
+                            <p class="article-excerpt">欧洲在追求绿色能源转型过程中遭遇了严峻挑战。本文探讨了其面临的能源价格波动、工业竞争力下降以及政策执行过程中的矛盾与应对策略。</p>
+                            <div class="article-meta">国际关系 · 阅读 1,890</div>
+                        </div>
+                    </article>
+
+                    <article class="article-item">
+                        <div class="article-date">
+                            <span class="date-day">28</span>
+                            <span class="date-month">09月</span>
+                        </div>
+                        <div class="article-content">
+                            <h3><a href="#">新能源技术的突破与商业化瓶颈</a></h3>
+                            <p class="article-excerpt">尽管光伏和风电成本大幅下降，但在储能技术和电网消纳能力上仍存在短板。我们需要怎样的技术路线来真正实现能源的清洁化与高效化？</p>
+                            <div class="article-meta">技术趋势 · 阅读 3,102</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3>合作咨询</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-light);">如果您需要专家观点、演讲邀约或深度调研报告，请通过以下方式联系。</p>
+                        
+                        <div class="info-item">
+                            <strong>邮箱</strong>
+                            <span>hanxp@example.com</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>办公地点</strong>
+                            <span>北京市朝阳区 · 能源智库中心</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>研究方向</strong>
+                            <span>能源政策、地缘政治、气候变化</span>
+                        </div>
+                    </div>
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('感谢您的留言，我们会尽快联系您。');">
+                        <div class="form-group">
+                            <input type="text" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="电子邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="请简述您的咨询需求..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">发送留言</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于韩晓平</h4>
+                    <p style="color: #666;">专注于能源战略与国际关系研究，致力于提供客观、专业的分析与建议。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#about">专家简介</a></li>
+                        <li><a href="#focus">研究领域</a></li>
+                        <li><a href="#articles">深度评论</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注动态</h4>
+                    <ul>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">知乎专栏</a></li>
+                        <li><a href="#">微信公众号</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 韩晓平观点. All Rights Reserved. 京ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
