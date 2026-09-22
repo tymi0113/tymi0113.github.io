@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="魔道祖師官方资讯与粉丝社区门户。提供原著小说精彩章节、官方动画剧情回顾、角色深度解析、同人作品精选及最新周边资讯。">
+    <meta name="keywords" content="魔道祖師,魏无羡,蓝忘机,魔道祖師动画,魔道祖師小说,忘羡,陈情令">
+    <title>魔道祖師-原著小说与官方动画深度解析门户</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d35400;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #f1c40f;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.8);
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        nav a:hover, nav a.active {
+            color: white;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .search-box {
+            display: none;
+        }
+
+        @media(min-width: 768px) {
+            .search-box {
+                display: block;
+                background: rgba(255,255,255,0.1);
+                border-radius: 20px;
+                padding: 5px 15px;
+                display: flex;
+                align-items: center;
+            }
+            .search-box input {
+                background: transparent;
+                border: none;
+                color: white;
+                outline: none;
+                width: 150px;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(circle at 20% 50%, rgba(211, 84, 0, 0.2) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 80%, rgba(241, 196, 15, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(211, 84, 0, 0.4);
+            color: white;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media(min-width: 992px) {
+            .container {
+                grid-template-columns: 3fr 1fr;
+            }
+        }
+
+        /* Section Styling */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        /* Featured Grid */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            background-color: #ddd;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 12px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: #999;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Character List */
+        .character-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .char-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            cursor: pointer;
+        }
+
+        .char-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #eee;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .rank-list {
+            list-style: none;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .rank-item:nth-child(1) .rank-num { background-color: #f1c40f; }
+        .rank-item:nth-child(2) .rank-num { background-color: #bdc3c7; }
+        .rank-item:nth-child(3) .rank-num { background-color: #e67e22; }
+
+        .rank-link {
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media(min-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .about-text h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            display: flex;
+        }
+
+        .info-list strong {
+            width: 80px;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: rgba(255,255,255,0.6);
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span>◈</span> 魔道祖師
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">小说章节</a></li>
+                    <li><a href="#">动画回顾</a></li>
+                    <li><a href="#">同人专区</a></li>
+                    <li><a href="#">角色图鉴</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索角色、剧情...">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>魏无羡与蓝忘机</h1>
+            <p>重修夷陵老祖，温氏覆灭真相，姑苏蓝氏问灵十三载。探索这段跨越生死的羁绊。</p>
+            <a href="#story" class="btn">阅读原著精选</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Main Content -->
+        <main>
+            <!-- Featured Section -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">热门推荐</h2>
+                    <a href="#" style="font-size: 0.9rem; color: var(--accent-color);">查看更多 &rarr;</a>
+                </div>
+                <div class="featured-grid">
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/wxj/400/250" alt="忘羡剧照" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">动画剧情</span>
+                            <h3 class="card-title">云深不知处：初遇</h3>
+                            <p class="card-desc">魏无羡在云深不知处听学，与蓝忘机发生了一系列啼笑皆非却又注定的纠葛。</p>
+                            <div class="card-meta">
+                                <span>2023-11-15</span>
+                                <span>2.3万阅读</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/wuxie/400/250" alt="夷陵老祖" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">角色解析</span>
+                            <h3 class="card-title">魏无羡：从修鬼道到重生</h3>
+                            <p class="card-desc">深入剖析魏无羡性格的形成背景，以及他在修鬼道过程中的心路历程。</p>
+                            <div class="card-meta">
+                                <span>2023-11-14</span>
+                                <span>5.1万阅读</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/lanyi/400/250" alt="姑苏蓝氏" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">世界观</span>
+                            <h3 class="card-title">仙门百家的恩怨情仇</h3>
+                            <p class="card-desc">梳理云梦江氏、姑苏蓝氏、兰陵金氏、清河聂氏之间的势力与冲突。</p>
+                            <div class="card-meta">
+                                <span>2023-11-12</span>
+                                <span>1.8万阅读</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/lanji/400/250" alt="蓝曦臣" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">角色解析</span>
+                            <h3 class="card-title">蓝曦臣：云梦双杰的兄长</h3>
+                            <p class="card-desc">作为姑苏蓝氏的继承人，蓝曦臣如何在家族危机中力挽狂澜。</p>
+                            <div class="card-meta">
+                                <span>2023-11-10</span>
+                                <span>9千阅读</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Story Synopsis -->
+            <section id="story" class="about-section">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>剧情梗概</h3>
+                        <p>故事背景设定在以修仙修灵为背景的架空世界“仙门百家”。姑苏蓝氏子弟魏无羡在云深不知处听学，结识了江澄与蓝忘机，并意外解开了“阴铁”的秘密。</p>
+                        <p>温氏作乱，魏无羡凭借“陈情”与“鬼道”之力护住仙门百家，却因此被世人误解。在乱葬岗失踪后，他意外重生回到五岁那年，开启了另一段人生。</p>
+                        <p>小说细腻地描绘了魏无羡与蓝忘机之间“魏无羡，蓝忘机”的深情羁绊，以及仙门百家在利益与正义之间的挣扎。</p>
+                    </div>
+                    <div class="about-stats">
+                        <h3>作品信息</h3>
+                        <ul class="info-list">
+                            <li><strong>原著作者：</strong>墨香铜臭</li>
+                            <li><strong>连载状态：</strong>已完结</li>
+                            <li><strong>动画制作：</strong>玄机科技</li>
+                            <li><strong>题材类型：</strong>仙侠、玄幻、耽美</li>
+                            <li><strong>主要平台：</strong>晋江文学城、腾讯视频</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <!-- Character Guide -->
+            <section class="card" style="padding: 20px;">
+                <div class="section-header" style="margin-bottom: 15px; border-bottom: none;">
+                    <h3 class="section-title" style="font-size: 1.2rem;">主要角色</h3>
+                </div>
+                <div class="character-list">
+                    <div class="char-item" title="魏无羡">
+                        <img src="https://picsum.photos/seed/wuxie_avatar/50/50" class="char-avatar" alt="魏无羡">
+                        <span>魏无羡</span>
+                    </div>
+                    <div class="char-item" title="蓝忘机">
+                        <img src="https://picsum.photos/seed/lanyi_avatar/50/50" class="char-avatar" alt="蓝忘机">
+                        <span>蓝忘机</span>
+                    </div>
+                    <div class="char-item" title="江澄">
+                        <img src="https://picsum.photos/seed/jiangcheng/50/50" class="char-avatar" alt="江澄">
+                        <span>江澄</span>
+                    </div>
+                    <div class="char-item" title="蓝曦臣">
+                        <img src="https://picsum.photos/seed/lanxichen/50/50" class="char-avatar" alt="蓝曦臣">
+                        <span>蓝曦臣</span>
+                    </div>
+                    <div class="char-item" title="聂怀桑">
+                        <img src="https://picsum.photos/seed/niehuaisang/50/50" class="char-avatar" alt="聂怀桑">
+                        <span>聂怀桑</span>
+                    </div>
+                    <div class="char-item" title="温宁">
+                        <img src="https://picsum.photos/seed/wenning/50/50" class="char-avatar" alt="温宁">
+                        <span>温宁</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ranking List -->
+            <section class="card" style="padding: 20px;">
+                <div class="section-header" style="margin-bottom: 15px; border-bottom: none;">
+                    <h3 class="section-title" style="font-size: 1.2rem;">热门CP</h3>
+                </div>
+                <ul class="rank-list">
+                    <li class="rank-item">
+                        <span class="rank-num">1</span>
+                        <a href="#" class="rank-link">忘羡 - 魏无羡 x 蓝忘机</a>
+                    </li>
+                    <li class="rank-item">
+                        <span class="rank-num">2</span>
+                        <a href="#" class="rank-link">澄羡 - 江澄 x 魏无羡</a>
+                    </li>
+                    <li class="rank-item">
+                        <span class="rank-num">3</span>
+                        <a href="#" class="rank-link">蓝曦江 - 蓝曦臣 x 江澄</a>
+                    </li>
+                    <li class="rank-item">
+                        <span class="rank-num">4</span>
+                        <a href="#" class="rank-link">聂怀桑 x 江澄</a>
+                    </li>
+                    <li class="rank-item">
+                        <span class="rank-num">5</span>
+                        <a href="#" class="rank-link">温宁 x 蓝忘机</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Quick Links -->
+            <section class="card" style="padding: 20px;">
+                <div class="section-header" style="margin-bottom: 15px; border-bottom: none;">
+                    <h3 class="section-title" style="font-size: 1.2rem;">快速导航</h3>
+                </div>
+                <ul class="rank-list">
+                    <li class="rank-item">
+                        <a href="#" class="rank-link">>>> 查看陈情令大结局解析</a>
+                    </li>
+                    <li class="rank-item">
+                        <a href="#" class="rank-link">>>> 魂灯问灵机制详解</a>
+                    </li>
+                    <li class="rank-item">
+                        <a href="#" class="rank-link">>>> 魔道祖师同人画集</a>
+                    </li>
+                    <li class="rank-item">
+                        <a href="#" class="rank-link">>>> 原著小说在线阅读</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo" style="justify-content: center; color: white; margin-bottom: 10px;">
+                <span>◈</span> 魔道祖師
+            </div>
+            <p>致力于提供最全面、最准确的魔道祖师资讯与同人交流平台。</p>
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">版权声明</a>
+                <a href="#">投稿指南</a>
+                <a href="#">联系站长</a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 魔道祖师爱好者社区. All Rights Reserved. 本站为非官方网站，内容仅供粉丝交流学习使用.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
