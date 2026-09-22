@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩信的故事 - 千古名将的传奇生平与历史典故</title>
+    <meta name="description" content="韩信的故事 - 深度梳理汉初三杰之一韩信的生平经历，包括胯下之辱、登坛拜将、十面埋伏、背水一战等经典历史典故，还原这位兵仙的传奇一生。">
+    <meta name="keywords" content="韩信的故事,韩信生平,韩信典故,汉初三杰,兵仙,背水一战,十面埋伏">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B0000; /* 深红，象征热血与历史 */
+            --secondary-color: #DAA520; /* 金色，象征兵家荣耀 */
+            --bg-color: #F9F7F2; /* 宣纸白 */
+            --text-main: #2C2C2C;
+            --text-secondary: #555555;
+            --border-color: #E0D6C8;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+            font-family: "Songti SC", "SimSun", serif;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            color: var(--text-secondary);
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/hanxin_hero/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-family: "Songti SC", "SimSun", serif;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* 核心简介 */
+        .intro-section {
+            padding: 80px 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            font-family: "Songti SC", "SimSun", serif;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .intro-text p {
+            margin-bottom: 20px;
+            text-indent: 2em;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .intro-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: var(--card-shadow);
+        }
+
+        /* 传奇典故 */
+        .stories-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .section-header .divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 0 auto;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .story-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .story-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .story-content {
+            padding: 25px;
+        }
+
+        .story-content h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .story-content p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* 生平时间轴 */
+        .timeline-section {
+            padding: 80px 0;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--border-color);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .timeline-item:nth-child(odd) {
+            justify-content: flex-end;
+            padding-right: 50px;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-left: 50px;
+            text-align: left;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 2px var(--primary-color);
+        }
+
+        .timeline-content {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            max-width: 400px;
+            border-top: 3px solid var(--secondary-color);
+        }
+
+        .timeline-date {
+            font-size: 14px;
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .timeline-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        /* 评价与影响 */
+        .impact-section {
+            padding: 80px 0;
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .impact-section h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 32px;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .impact-item {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .impact-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .impact-item h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .impact-item p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #333;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .nav-links {
+                display: none; /* 简化处理，移动端隐藏导航 */
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-img {
+                height: 250px;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                justify-content: flex-start !important;
+                padding-left: 50px !important;
+                text-align: left !important;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">韩信的故事</div>
+            <nav class="nav-links">
+                <a href="#intro" class="active">人物简介</a>
+                <a href="#stories">经典典故</a>
+                <a href="#timeline">生平大事</a>
+                <a href="#impact">历史影响</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>兵仙韩信</h1>
+            <p>胯下之辱忍常人所不能忍，登坛拜将施非凡之奇谋。汉初三杰之一，中国军事史上最杰出的统帅。</p>
+        </div>
+    </section>
+
+    <!-- 人物简介 -->
+    <section id="intro" class="container intro-section">
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h2>从布衣到兵仙</h2>
+                <p>韩信，西汉开国功臣，中国历史上最杰出的军事家之一，被后人奉为“兵仙”、“神帅”。他早年家贫，曾受胯下之辱，后投身项梁、项羽麾下，未受重用。汉王刘邦入蜀，韩信弃楚归汉，初任郎中，后经萧何力荐，汉王拜为大将。</p>
+                <p>韩信善于用兵，指挥作战灵活多变，提出了“多多益善”的军事理论。他先后平定魏、代、燕、赵，在井陉之战中背水一战，击败赵军；在潍水之战中，利用水势全歼龙且二十万大军。随后他率军直捣齐都临淄，彻底平定齐地。在垓下之战中，他设下十面埋伏之计，逼得项羽乌江自刎，为汉朝的建立立下了不朽功勋。</p>
+            </div>
+            <img src="https://picsum.photos/seed/hanxin_intro/600/400.jpg" alt="韩信画像" class="intro-img">
+        </div>
+    </section>
+
+    <!-- 经典典故 -->
+    <section id="stories" class="stories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>千古流传的典故</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="stories-grid">
+                <article class="story-card">
+                    <img src="https://picsum.photos/seed/kneel/400/250.jpg" alt="胯下之辱" class="story-img">
+                    <div class="story-content">
+                        <h3>胯下之辱</h3>
+                        <p>淮阴街头，市井无赖挑衅韩信，拔剑相向却最终收剑入鞘，从无赖胯下爬过。旁人以为他胆小，实则他胸怀大志，不愿为小事断送性命，以成大器。</p>
+                    </div>
+                </article>
+                <article class="story-card">
+                    <img src="https://picsum.photos/seed/altar/400/250.jpg" alt="登坛拜将" class="story-img">
+                    <div class="story-content">
+                        <h3>登坛拜将</h3>
+                        <p>萧何月下追韩信，并向刘邦极力推荐。刘邦斋戒设坛，隆重举行仪式，拜韩信为大将军。这一刻，韩信的军事才能终于得到了施展的舞台。</p>
+                    </div>
+                </article>
+                <article class="story-card">
+                    <img src="https://picsum.photos/seed/backwater/400/250.jpg" alt="背水一战" class="story-img">
+                    <div class="story-content">
+                        <h3>背水一战</h3>
+                        <p>井陉之战，韩信故意背靠河水列阵，断绝退路，激发士兵拼死求生的勇气，最终大破赵军，创造了军事史上的奇迹。</p>
+                    </div>
+                </article>
+                <article class="story-card">
+                    <img src="https://picsum.photos/seed/tenfaces/400/250.jpg" alt="十面埋伏" class="story-img">
+                    <div class="story-content">
+                        <h3>十面埋伏</h3>
+                        <p>垓下之战，韩信将项羽军团团围住，运用“十面埋伏”之计，四面楚歌，瓦解了楚军的斗志，最终逼得西楚霸王项羽乌江自刎。</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 生平大事时间轴 -->
+    <section id="timeline" class="container timeline-section">
+        <div class="section-header">
+            <h2>生平大事年表</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">约公元前231年</span>
+                    <h3 class="timeline-title">出生淮阴</h3>
+                    <p>出生于淮阴（今江苏淮安），早年父母双亡，家贫无行，常从人寄食。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">约公元前209年</span>
+                    <h3 class="timeline-title">投身起义</h3>
+                    <p>陈胜、吴广起义爆发后，韩信投奔项梁、项羽，但因未被重用，转投刘邦。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">公元前206年</span>
+                    <h3 class="timeline-title">登坛拜将</h3>
+                    <p>萧何力荐韩信，刘邦设坛拜韩信为大将，韩信提出“明修栈道，暗度陈仓”之计。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">公元前204年</span>
+                    <h3 class="timeline-title">井陉大捷</h3>
+                    <p>韩信率军东出陈仓，平定三秦，后与赵军对峙，背水一战，大破赵国二十万大军。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">公元前203年</span>
+                    <h3 class="timeline-title">齐王受封</h3>
+                    <p>韩信攻占齐国，请求自立为齐王，刘邦被迫同意，韩信随后攻下彭城，占据楚地。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">公元前202年</span>
+                    <h3 class="timeline-title">垓下受封</h3>
+                    <p>刘邦联合各路诸侯围攻项羽，韩信设下十面埋伏，逼迫项羽乌江自刎。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">公元前196年</span>
+                    <h3 class="timeline-title">功高被忌</h3>
+                    <p>吕后与萧何设计，将韩信诱骗至长乐宫钟室处死，韩信临死前叹道：“狡兔死，走狗烹。”</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 历史影响 -->
+    <section id="impact" class="impact-section">
+        <div class="container">
+            <h2>历史评价与影响</h2>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-icon">⚔️</div>
+                    <h3>军事天才</h3>
+                    <p>韩信是中国历史上军事指挥艺术的巅峰代表，其灵活多变的战术至今仍被军事院校研究。</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon">📜</div>
+                    <h3>兵书著作</h3>
+                    <p>据传韩信著有《韩信兵法》三篇，虽多散佚，但其军事思想对后世影响深远。</p>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon">❤️</div>
+                    <h3>悲剧英雄</h3>
+                    <p>“成也萧何，败也萧何”，韩信的一生充满了传奇色彩，也充满了悲剧意味，令人唏嘘。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>韩信的故事 - 专注历史人物传记与典故整理</p>
+            <p>&copy; 2023 历史文化展示平台. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
